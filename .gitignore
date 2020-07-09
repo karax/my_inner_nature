@@ -1,7 +1,5 @@
 *.iml
 *.idea
-gradle-wrapper.jar
-gradle-wrapper.properties
 .idea/misc.xml
 .gradle
 /local.properties
@@ -18,6 +16,5 @@ gradle-wrapper.properties
 .idea/runConfigurations.xml
 .idea/vcs.xml
 .idea/codeStyles/Project.xml
-gradle/wrapper/gradle-wrapper.properties
 app/google-services.json
 .idea/assetWizardSettings.xml
