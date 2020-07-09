@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- PLANT INFO SCREEN -->
+    <string name="app_name">My Inner Nature</string>
+    <string name="text_change_plant_picture">Change your plant picture</string>
+    <string name="label_popular_name">Popular Name</string>
+    <string name="label_plant_species">Plant Species</string>
+    <string name="label_home_name">Home Name</string>
+    <string name="label_fertilizer_type">Fertilizer Type</string>
+    <string name="label_water_frequency">Water Frequency (times per week)</string>
+    <string name="label_sunlight_exposition">Sunlight Exposition</string>
+    <string name="label_annotations">Annotations</string>
+    <string name="label_notify_switch">Notify me when to water</string>
+    <string name="text_button_edit_button">EDIT</string>
+    <string name="text_button_delete_button">DELETE</string>
+    <string name="text_button_no">No</string>
+    <string name="text_button_yes">Yes</string>
+
+    <!-- EDIT/ADD PLANT SCREEN -->
+    <string name="text_edit_plant_picture">Take a picture of your plant :)</string>
+    <string name="label_edit_home_name">Home Name (optional)</string>
+    <string name="label_edit_fertilizer_type">Fertilizer Type (optional)</string>
+    <string name="label_edit_sunlight_exposition">Sunlight Exposition (optional)</string>
+    <string name="label_edit_annotations">Annotations (optional)</string>
+    <string name="text_button_cancel">CANCEL</string>
+    <string name="text_button_save">SAVE</string>
+    <string name="water_frequency_prompt">Days per week</string>
+    <string-array name="water_frequency_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <!-- CAMERA LAYER -->
+    <string name="text_landscape_mode">For a better result, please position your camera on landscape mode ;)</string>
+
+    <!-- ABOUT SCREEN -->
+    <string name="label_app_version">Version</string>
+    <string name="label_app_author">Author</string>
+    <string name="label_app_disclaimers">Disclaimers</string>
+    <string name="label_app_acknowledgments">Acknowledgments</string>
+    <string name="text_app_version">1.0.0b</string>
+    <string name="text_app_author">Jean Karax</string>
+    <string name="text_app_disclaimers">Cat ipsum dolor sit amet, lick the plastic bag. Get my claw stuck in the dogs ear ask to go outside and ask to come inside and ask to go outside</string>
+    <string name="text_app_acknowledgments">Plus icon made by Hanah from www.flaticon.com.\nCamera icon made by EpicCoders from www.flaticon.com.\nTick, Google and Leaf icons made by Freepik from www.flaticon.com.\nClose icon made by Chanut from www.flaticon.com.</string>
+
+    <!-- WIDGET -->
+    <string name="widget_text_water_it">Water it!</string>
+    <string name="widget_label_next_plant_to_water">This is your next plant to water</string>
+
+    <!-- DESCRIPTION TAGS -->
+    <string name="description_camera_icon">camera icon</string>
+    <string name="description_plant_picture">plant picture</string>
+    <string name="description_confirm_icon">confirm icon</string>
+    <string name="descriptioncancel_icon">cancel icon</string>
+    <string name="description_add_plant_button">add plant button</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_warning_delete_plant">Delete Plant</string>
+    <string name="text_warning_delete_plant">Are you sure you want to delete this plant? You will not be able to undo this. To see it again , you will need to add as a new plant to your list.</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="notification_channel_name">WateringReminder</string>
+    <string name="text_notification_watering_plant">Time to water %s !</string>
+    <string name="tv_add_to_widget">ADD TO WIDGET</string>
+    <string name="camera_provider_path">com.jeankarax.myinnergarden.provider</string>
+</resources>
