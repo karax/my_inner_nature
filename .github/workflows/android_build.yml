@@ -16,7 +16,8 @@ jobs:
           java-version: 1.8
 
       - name: Clean project
-        run: ./gradlew clean
+        run: gradle clean
 
       - name: Build Project
         run: ./gradlew assemble
+      
