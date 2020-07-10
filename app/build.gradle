@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
 
@@ -35,6 +36,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
     implementation 'com.google.firebase:firebase-auth:19.3.2'
     implementation 'com.firebase:firebase-jobdispatcher:0.5.2'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
 
     //Test
     testImplementation 'junit:junit:4.12'
