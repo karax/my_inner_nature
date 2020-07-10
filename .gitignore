@@ -19,5 +19,4 @@ gradle-wrapper.properties
 .idea/vcs.xml
 .idea/codeStyles/Project.xml
 gradle/wrapper/gradle-wrapper.properties
-app/google-services.json
 .idea/assetWizardSettings.xml
