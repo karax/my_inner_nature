@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "872509572939",
+    "firebase_url": "https://my-inner-nature.firebaseio.com",
+    "project_id": "my-inner-nature",
+    "storage_bucket": "my-inner-nature.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872509572939:android:db4cf001961d33692c8ace",
+        "android_client_info": {
+          "package_name": "com.jeankarax.myinnernature"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872509572939-mr1krevjilmlt5ahj69eojqpgtr03ue2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jeankarax.myinnernature",
+            "certificate_hash": "4f0006ba413e4ad4b443eb076896cae6f51b161e"
+          }
+        },
+        {
+          "client_id": "872509572939-qdnev89ds0u2fbsngdck23j3eedd8jt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOyw_277RjYgN_79-3dRtYgMPKBzyr8rU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872509572939-qdnev89ds0u2fbsngdck23j3eedd8jt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
