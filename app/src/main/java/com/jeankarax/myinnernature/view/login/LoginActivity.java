@@ -7,6 +7,7 @@ import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.jeankarax.myinnernature.R;
 import com.jeankarax.myinnernature.view.about.AboutActivity;
+import com.jeankarax.myinnernature.view.mainmenu.MainMenuActivity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -40,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == RC_SIGN_IN){
-            startActivity(new Intent(this, AboutActivity.class));
+            startActivity(new Intent(this, MainMenuActivity.class));
         }
     }
 }
