@@ -14,7 +14,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="17dp"
-            android:text="Versio: 1.0"
+            android:text="@string/about_version_label"
             />
 
         <TextView
@@ -24,7 +24,7 @@
              app:layout_constraintTop_toBottomOf="@id/tv_app_version"
              app:layout_constraintStart_toStartOf="@id/tv_app_version"
              android:layout_marginTop="5dp"
-             android:text="Author: Jean Karax"
+             android:text="@string/about_author_label"
             />
 
         <TextView
@@ -34,7 +34,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_app_author"
             app:layout_constraintStart_toStartOf="@id/tv_app_author"
             android:layout_marginTop="5dp"
-            android:text="Disclaimers: "/>
+            android:text="@string/about_disclaimers_label"/>
 
         <TextView
             android:id="@+id/tv_app_acknowledgements"
@@ -43,7 +43,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_disclaimers"
             app:layout_constraintStart_toStartOf="@id/tv_disclaimers"
             android:layout_marginTop="5dp"
-            android:text="Acknowledgements: "/>
+            android:text="@string/about_acknowledgements_label"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

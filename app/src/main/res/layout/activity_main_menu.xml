@@ -37,7 +37,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Plantas"/>
+                        android:text="@string/main_menu_plants_title"/>
 
                 </LinearLayout>
 
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Fermentados"/>
+                        android:text="@string/main_menu_title_fermented"/>
 
                 </LinearLayout>
 
