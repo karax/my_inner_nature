@@ -12,7 +12,6 @@ import com.jeankarax.myinnernature.R;
 import com.jeankarax.myinnernature.databinding.ActivityMainMenuBinding;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentActivity;
 
@@ -23,25 +22,37 @@ public class MainMenuActivity extends FragmentActivity {
 
     private ActivityMainMenuBinding binding;
 
+    NaturePagerAdapter pagerAdapter= new NaturePagerAdapter(this);
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_menu);
+
+        binding.vpLists.setAdapter(pagerAdapter);
+
         binding.llMyFermentations.setOnClickListener( listener -> {
             animateIcons();
+            binding.vpLists.setVisibility(View.VISIBLE);
+            binding.vpLists.setCurrentItem(2);
         });
         binding.llMyPlants.setOnClickListener(listener -> {
             animateIcons();
+            binding.vpLists.setVisibility(View.VISIBLE);
+            binding.vpLists.setCurrentItem(1);
         });
         binding.ibAddButton.setOnClickListener(listener -> {
             Toast.makeText(this, "Novo item", Toast.LENGTH_SHORT).show();
         });
 
+
+
     }
 
     @Override
     public void onBackPressed() {
+        binding.vpLists.setVisibility(View.GONE);
         resetIcons();
     }
 
