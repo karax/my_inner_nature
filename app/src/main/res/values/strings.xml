@@ -69,4 +69,10 @@
     <string name="text_notification_watering_plant">Time to water %s !</string>
     <string name="tv_add_to_widget">ADD TO WIDGET</string>
     <string name="camera_provider_path">com.jeankarax.myinnergarden.provider</string>
+    <string name="main_menu_plants_title">Plantas</string>
+    <string name="main_menu_title_fermented">Fermentados</string>
+    <string name="about_version_label">Version: 1.0</string>
+    <string name="about_author_label">Author: Jean Karax</string>
+    <string name="about_disclaimers_label">Disclaimers:</string>
+    <string name="about_acknowledgements_label">Acknowledgements:</string>
 </resources>
