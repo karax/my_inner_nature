@@ -10,4 +10,9 @@
     <color name="pure_white">#FFFFFF</color>
     <color name="green_menu">#467a0b</color>
     <color name="background_gray">#FAFAFA</color>
+
+    <!--Main Menu-->
+    <color name="main_menu_background">#f5f9e4</color>
+    <color name="main_menu_bottom_bar">#c93335</color>
+
 </resources>
