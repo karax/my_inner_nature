@@ -14,6 +14,7 @@ import com.jeankarax.myinnernature.databinding.ActivityMainMenuBinding;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 /**
  * Created by Jean Karax on 13/07/2020.
@@ -21,12 +22,16 @@ import androidx.fragment.app.FragmentActivity;
 public class MainMenuActivity extends FragmentActivity {
 
     private ActivityMainMenuBinding binding;
+    private MainMenuViewModel viewModel;
 
-    NaturePagerAdapter pagerAdapter= new NaturePagerAdapter(this);
+    MenuPagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainMenuViewModel.class);
+        pagerAdapter= new MenuPagerAdapter(getSupportFragmentManager(), getLifecycle(), viewModel);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_menu);
 
@@ -35,12 +40,12 @@ public class MainMenuActivity extends FragmentActivity {
         binding.llMyFermentations.setOnClickListener( listener -> {
             animateIcons();
             binding.vpLists.setVisibility(View.VISIBLE);
-            binding.vpLists.setCurrentItem(2);
+            binding.vpLists.setCurrentItem(1);
         });
         binding.llMyPlants.setOnClickListener(listener -> {
             animateIcons();
             binding.vpLists.setVisibility(View.VISIBLE);
-            binding.vpLists.setCurrentItem(1);
+            binding.vpLists.setCurrentItem(0);
         });
         binding.ibAddButton.setOnClickListener(listener -> {
             Toast.makeText(this, "Novo item", Toast.LENGTH_SHORT).show();

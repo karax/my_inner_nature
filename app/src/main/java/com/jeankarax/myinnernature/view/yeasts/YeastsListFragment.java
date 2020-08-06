@@ -1,4 +1,4 @@
-package com.jeankarax.myinnernature.view.plants;
+package com.jeankarax.myinnernature.view.yeasts;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,26 +12,27 @@ import androidx.fragment.app.Fragment;
 
 import com.jeankarax.myinnernature.R;
 import com.jeankarax.myinnernature.databinding.FragmentPlantsListBinding;
+import com.jeankarax.myinnernature.databinding.FragmentYeastsListBinding;
 import com.jeankarax.myinnernature.view.mainmenu.MainMenuViewModel;
-import com.jeankarax.myinnernature.view.mainmenu.vo.PlantVO;
+import com.jeankarax.myinnernature.view.mainmenu.vo.YeastVO;
 
 import java.util.ArrayList;
 
-public class PlantsListFragment extends Fragment {
+public class YeastsListFragment extends Fragment {
 
-    private MainMenuViewModel mViewModel;
-    private ArrayList<PlantVO> mPlantsList;
+    ArrayList<YeastVO> mYeastList;
+    MainMenuViewModel mViewModel;
 
-    public PlantsListFragment(ArrayList<PlantVO> plantsList, MainMenuViewModel viewModel) {
+    public YeastsListFragment(ArrayList<YeastVO> yeastList, MainMenuViewModel viewModel) {
+        mYeastList = yeastList;
         mViewModel = viewModel;
-        mPlantsList = plantsList;
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentPlantsListBinding plantsListBinding;
-        plantsListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_plants_list, container, false);
-        return plantsListBinding.getRoot();
+        FragmentYeastsListBinding yeastsListBinding;
+        yeastsListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_yeasts_list, container, false);
+        return yeastsListBinding.getRoot();
     }
 }
