@@ -22,7 +22,6 @@ import androidx.lifecycle.ViewModelProvider;
 public class MainMenuActivity extends FragmentActivity {
 
     private ActivityMainMenuBinding binding;
-    private MainMenuViewModel viewModel;
 
     MenuPagerAdapter pagerAdapter;
 
@@ -30,29 +29,40 @@ public class MainMenuActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainMenuViewModel.class);
+        MainMenuViewModel viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainMenuViewModel.class);
         pagerAdapter= new MenuPagerAdapter(getSupportFragmentManager(), getLifecycle(), viewModel);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_menu);
 
+        bindComponents();
+    }
+
+    private void bindComponents() {
         binding.vpLists.setAdapter(pagerAdapter);
 
-        binding.llMyFermentations.setOnClickListener( listener -> {
+        binding.llMyFermentations.setOnClickListener( view -> {
             animateIcons();
             binding.vpLists.setVisibility(View.VISIBLE);
             binding.vpLists.setCurrentItem(1);
         });
-        binding.llMyPlants.setOnClickListener(listener -> {
+        binding.llMyPlants.setOnClickListener(view -> {
             animateIcons();
             binding.vpLists.setVisibility(View.VISIBLE);
             binding.vpLists.setCurrentItem(0);
         });
-        binding.ibAddButton.setOnClickListener(listener -> {
+        binding.ibAddButton.setOnClickListener(view -> {
             Toast.makeText(this, "Novo item", Toast.LENGTH_SHORT).show();
         });
 
+        binding.ivPlantTab.setOnClickListener(view -> {
+            binding.vpLists.setCurrentItem(0);
 
+        });
 
+        binding.ivFermentationTab.setOnClickListener(view -> {
+            binding.vpLists.setCurrentItem(1);
+            
+        });
     }
 
     @Override
