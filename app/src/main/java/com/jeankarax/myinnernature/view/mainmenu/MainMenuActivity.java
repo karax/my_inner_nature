@@ -10,11 +10,15 @@ import android.widget.Toast;
 
 import com.jeankarax.myinnernature.R;
 import com.jeankarax.myinnernature.databinding.ActivityMainMenuBinding;
+import com.jeankarax.myinnernature.view.mainmenu.vo.PlantVO;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import java.util.ArrayList;
 
 /**
  * Created by Jean Karax on 13/07/2020.
@@ -30,11 +34,18 @@ public class MainMenuActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         MainMenuViewModel viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(MainMenuViewModel.class);
-        pagerAdapter= new MenuPagerAdapter(getSupportFragmentManager(), getLifecycle(), viewModel);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_menu);
 
-        bindComponents();
+        viewModel.plantListMutableLiveData.observe(this, new Observer<ArrayList<PlantVO>>() {
+            @Override
+            public void onChanged(ArrayList<PlantVO> plantVOS) {
+                pagerAdapter= new MenuPagerAdapter(getSupportFragmentManager(), getLifecycle(), viewModel);
+                bindComponents();
+            }
+        });
+
+        viewModel.fetchLists();
     }
 
     private void bindComponents() {

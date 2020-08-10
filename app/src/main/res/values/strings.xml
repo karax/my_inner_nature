@@ -75,4 +75,5 @@
     <string name="about_author_label">Author: Jean Karax</string>
     <string name="about_disclaimers_label">Disclaimers:</string>
     <string name="about_acknowledgements_label">Acknowledgements:</string>
+    <string name="description_plant_options">plant options</string>
 </resources>

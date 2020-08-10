@@ -23,7 +23,7 @@ public class MenuPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new PlantsListFragment(mViewModel.getPlantList(), mViewModel);
+                return new PlantsListFragment(mViewModel.getPlantList());
             case 1:
                 return new YeastsListFragment(mViewModel.getYeastList(), mViewModel);
         }
