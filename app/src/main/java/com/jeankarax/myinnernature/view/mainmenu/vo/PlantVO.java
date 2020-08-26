@@ -1,13 +1,13 @@
 package com.jeankarax.myinnernature.view.mainmenu.vo;
 
+import android.content.Context;
+
+import com.jeankarax.myinnernature.view.DateUtilities;
+
 public class PlantVO extends NatureVO{
-    private String lastTimeWatered;
 
-    public String getLastTimeWatered() {
-        return lastTimeWatered;
+    public String getLastTimeWatered(Context ctx) {
+        return DateUtilities.lastDayWatered(ctx, getSchedules().get(1).getLastDate());
     }
 
-    public void setLastTimeWatered(String lastTimeWatered) {
-        this.lastTimeWatered = lastTimeWatered;
-    }
 }
