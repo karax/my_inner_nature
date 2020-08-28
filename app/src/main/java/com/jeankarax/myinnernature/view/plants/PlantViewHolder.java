@@ -1,6 +1,7 @@
 package com.jeankarax.myinnernature.view.plants;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,12 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jeankarax.myinnernature.R;
+import com.jeankarax.myinnernature.view.DateUtilities;
 import com.jeankarax.myinnernature.view.mainmenu.vo.NatureSchedule;
 import com.jeankarax.myinnernature.view.mainmenu.vo.PlantVO;
 
+import java.util.Calendar;
 import java.util.Map;
 
-public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
+public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
 
     private ImageView ivPlantPic;
     private TextView tvPlantName;
@@ -26,7 +29,6 @@ public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnC
     private ImageButton ibItemOptions;
     private View vDivider;
     private Context mCtx;
-
 
     public PlantViewHolder(@NonNull View itemView, Context ctx) {
         super(itemView);
@@ -41,7 +43,7 @@ public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnC
 
     }
 
-    public void bind(PlantVO plantVO){
+    public void bind(PlantVO plantVO) {
         //TODO set image
         tvPlantName.setText(plantVO.getName());
         tvLastTimeWatered.setText(plantVO.getLastTimeWatered(mCtx));
@@ -52,12 +54,6 @@ public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnC
         ibItemOptions.setOnCreateContextMenuListener(this);
     }
 
-    private void addSchedules(Map<Integer, NatureSchedule> schedules) {
-        for(Map.Entry<Integer, NatureSchedule> entry : schedules.entrySet()){
-
-        }
-    }
-
     @Override
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
         contextMenu.add(this.getAdapterPosition(), 1, 0, R.string.text_plant_item_menu_edit);
@@ -65,6 +61,17 @@ public class PlantViewHolder extends RecyclerView.ViewHolder implements View.OnC
     }
 
     public void setLastItem(boolean b) {
-        vDivider.setVisibility(b? View.GONE: View.VISIBLE);
+        vDivider.setVisibility(b ? View.GONE : View.VISIBLE);
+    }
+
+    private void addSchedules(Map<Integer, NatureSchedule> schedules) {
+        for (Map.Entry<Integer, NatureSchedule> entry : schedules.entrySet()) {
+            if(null != entry.getValue().getNextDate()) {
+                TextView schedule = new TextView(mCtx);
+                schedule.setTextSize(TypedValue.COMPLEX_UNIT_SP,12);
+                schedule.setText(DateUtilities.nextSchedule(mCtx, entry.getValue().getNextDate(), entry.getKey()));
+                llSchedules.addView(schedule);
+            }
+        }
     }
 }

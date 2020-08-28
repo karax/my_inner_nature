@@ -71,18 +71,27 @@
 
 
     <!-- REVAMP -->
-    <string name="main_menu_plants_title">Plantas</string>
-    <string name="main_menu_title_fermented">Fermentados</string>
+    <string name="main_menu_plants_title">Plants</string>
+    <string name="main_menu_title_fermented">Fermented</string>
     <string name="about_version_label">Version: 1.0</string>
     <string name="about_author_label">Author: Jean Karax</string>
     <string name="about_disclaimers_label">Disclaimers:</string>
     <string name="about_acknowledgements_label">Acknowledgements:</string>
     <string name="description_plant_options">plant options</string>
-    <string name="text_watered_yesterday">Regada ontem às %dh%dm</string>
-    <string name="text_last_day_watered">Regada no último dia %d/%d, às %dh%dm</string>
-    <string name="text_water_tomorrow">Próxima rega amanhã</string>
-    <string name="text_next_day_to_water">Regar no próximo dia %d</string>
-    <string name="text_plant_item_menu_edit">Editar</string>
-    <string name="text_plant_item_menu_delete">Excluir</string>
+    <string name="text_watered_yesterday">Watered yesterday at %dh%dm</string>
+    <string name="text_last_day_watered">Watered last day %d/%d, at %dh%dm</string>
+    <string name="text_schedule_tomorrow">Next %s tomorrow</string>
+    <string name="text_next_day_schedule">%s next day %d</string>
+    <string name="text_plant_item_menu_edit">Edit</string>
+    <string name="text_plant_item_menu_delete">Delete</string>
+    <string name="text_water_action">Water</string>
+    <string name="text_fertilize_action">Fertilize</string>
+    <string name="text_prune_action">Prune</string>
+    <string name="text_sprinkle_action">Sprinkle</string>
+    <string name="text_fungicide_action">Fungicide</string>
+    <string name="text_pesticide_action">Pesticide</string>
+    <string name="text_weed_action">Weed cut</string>
+    <string name="text_replant_action">Replant</string>
+    <string name="text_seed_action">Seed</string>
 
 </resources>
