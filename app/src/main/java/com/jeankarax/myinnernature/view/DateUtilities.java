@@ -7,6 +7,8 @@ import com.jeankarax.myinnernature.view.mainmenu.vo.NatureSchedule;
 
 import java.util.Calendar;
 
+import static java.lang.Math.abs;
+
 public class DateUtilities {
 
     public static String lastDayWatered(Context ctx, Calendar calendar){
@@ -37,7 +39,7 @@ public class DateUtilities {
         Calendar today = Calendar.getInstance();
         String scheduleText = "";
         if (nextDate.get(Calendar.MONTH) == today.get(Calendar.MONTH) &&
-                (nextDate.get(Calendar.DAY_OF_MONTH) - today.get(Calendar.DAY_OF_MONTH)) < 8) {
+                abs(nextDate.get(Calendar.DAY_OF_MONTH) - today.get(Calendar.DAY_OF_MONTH)) < 8 ) {
             switch (action){
                 case 1:
                     //Water

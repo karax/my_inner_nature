@@ -49,18 +49,20 @@ public class MainMenuViewModel extends AndroidViewModel {
         NatureSchedule schedule1 = new NatureSchedule();
         Calendar lastDate1 = Calendar.getInstance();
         lastDate1.set(Calendar.DATE, 30);
+        lastDate1.set(Calendar.MONTH, 7);
         schedule1.setLastDate(lastDate1);
         Calendar nextDate1 = Calendar.getInstance();
-        nextDate1.set(Calendar.DATE, 9);
+        nextDate1.set(Calendar.DATE, 29);
+        nextDate1.set(Calendar.MONTH, 7);
         schedule1.setNextDate(nextDate1);
 
         NatureSchedule schedule12 = new NatureSchedule();
         Calendar lastDate12 = Calendar.getInstance();
         lastDate12.set(Calendar.DATE, 30);
-        schedule12.setLastDate(lastDate1);
+        schedule12.setLastDate(lastDate12);
         Calendar nextDate12 = Calendar.getInstance();
         nextDate12.set(Calendar.DATE, 9);
-        schedule12.setNextDate(nextDate1);
+        schedule12.setNextDate(nextDate12);
 
         NatureSchedule schedule2 = new NatureSchedule();
         Calendar lastDate2 = Calendar.getInstance();
